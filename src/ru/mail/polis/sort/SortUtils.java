@@ -14,8 +14,26 @@ public class SortUtils {
         a[j] = x;
     }
 
+    public static void swap(Integer[] a, int i, int j) {
+        Integer x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+
     public static int[] generateArray(int n) {
         int[] a = new int[n];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = i;
+        }
+        for (int i = a.length - 1; i > 0; i--) {
+            int j = r.nextInt(i + 1);
+            SortUtils.swap(a, i, j);
+        }
+        return a;
+    }
+
+    public static Integer[] generateBoxedArray(int n) {
+        Integer[] a = new Integer[n];
         for (int i = 0; i < a.length; i++) {
             a[i] = i;
         }

@@ -31,7 +31,7 @@ public class SimpleString implements Numerical<SimpleString> {
         if (index < 0) {
             throw new IndexOutOfBoundsException("Negative index " + index);
         } else if (index >= getDigitCount()) {
-            return MIN_DIGIT_VALUE;
+            return 0;
         } else {
             return data.charAt(index) - MIN_DIGIT_VALUE;
         }
@@ -51,5 +51,10 @@ public class SimpleString implements Numerical<SimpleString> {
     @Override
     public int compareTo(SimpleString anotherSimpleString) {
         return data.compareTo(anotherSimpleString.data);
+    }
+
+    @Override
+    public String toString() {
+        return "SimpleString( " + data + " )";
     }
 }
