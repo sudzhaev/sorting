@@ -1,8 +1,5 @@
 package ru.mail.polis.sort;
 
-import ru.mail.polis.bench.BenchmarkUtils;
-
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -42,13 +39,4 @@ public class QSort3Way<T extends Comparable<T>> extends AbstractSortOnComparison
         quickSort(data, left, lt - 1);
         quickSort(data, gt + 1, right);
     }
-
-    public static void main(String[] args) {
-        System.out.println(QSort3Way.class.getSimpleName());
-        Integer[] array = BenchmarkUtils.generateRepetitiveArray(30);
-        System.out.println(Arrays.toString(array));
-        new QSort3Way<Integer>().sort(array);
-        System.out.println(Arrays.toString(array));
-    }
-
 }

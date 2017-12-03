@@ -1,12 +1,10 @@
 package ru.mail.polis.sort;
 
 import ru.mail.polis.structures.IntKeyObject;
-import ru.mail.polis.structures.IntKeyStringValueObject;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 
 
 public class CountingSort<T extends IntKeyObject> implements Sort<T> {
@@ -43,20 +41,5 @@ public class CountingSort<T extends IntKeyObject> implements Sort<T> {
                 .min(Comparator.comparingInt(IntKeyObject::getKey))
                 .map(IntKeyObject::getKey)
                 .orElse(0);
-    }
-
-    @SuppressWarnings("unchecked")
-    public static void main(String[] args) {
-        List<IntKeyObject<String>> list = Arrays.asList(
-                new IntKeyStringValueObject(-1, "abc"),
-                new IntKeyStringValueObject(-3, "jkl"),
-                new IntKeyStringValueObject(-2, "bcd"),
-                new IntKeyStringValueObject(-8, "xxz"),
-                new IntKeyStringValueObject(-1, "xyz"),
-                new IntKeyStringValueObject(-7, "xyz"));
-        IntKeyObject<String>[] array = (IntKeyObject<String>[]) list.toArray();
-        System.out.println(Arrays.toString(array));
-        new CountingSort<IntKeyObject<String>>().sort(array);
-        System.out.println(Arrays.toString(array));
     }
 }

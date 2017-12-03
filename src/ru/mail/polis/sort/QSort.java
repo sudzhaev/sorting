@@ -1,6 +1,5 @@
 package ru.mail.polis.sort;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -52,14 +51,5 @@ public class QSort<T extends Comparable<T>> extends AbstractSortOnComparisons<T>
             }
             data[j] = curr;
         }
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println(QSort.class.getSimpleName());
-        Integer[] arr = SortUtils.generateBoxedArray(60);
-        System.out.println(Arrays.toString(arr));
-        new QSort<Integer>().sort(arr);
-        System.out.println(Arrays.toString(arr));
     }
 }

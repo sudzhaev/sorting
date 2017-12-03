@@ -1,7 +1,4 @@
 package ru.mail.polis.sort;
-import ru.mail.polis.bench.BenchmarkUtils;
-
-import java.util.Arrays;
 import java.util.Comparator;
 
 public class HeapSort<T extends Comparable<T>> extends AbstractSortOnComparisons<T> {
@@ -49,14 +46,5 @@ public class HeapSort<T extends Comparable<T>> extends AbstractSortOnComparisons
             }
             break;
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(HeapSort.class.getSimpleName());
-        Integer[] arr = BenchmarkUtils.generateReversedHeap(20);
-        System.out.println(Arrays.toString(arr));
-        new HeapSort<Integer>().sort(arr);
-        System.out.println(Arrays.toString(arr));
-        System.out.println(SortUtils.isArraySorted(arr));
     }
 }

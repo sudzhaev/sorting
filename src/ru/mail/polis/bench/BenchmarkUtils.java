@@ -1,6 +1,5 @@
 package ru.mail.polis.bench;
 
-import ru.mail.polis.sort.CountingSort;
 import ru.mail.polis.structures.IntKeyStringValueObject;
 import ru.mail.polis.structures.SimpleInteger;
 import ru.mail.polis.structures.SimpleString;
@@ -134,16 +133,5 @@ public class BenchmarkUtils {
             result[i] = new IntKeyStringValueObject(data[i], randomString(5));
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        CountingSort<IntKeyStringValueObject> sort = new CountingSort<>();
-        IntKeyStringValueObject[] array = wrapIntKeyStringValueObjectArray(
-                generateRandomArray(1000)
-        );
-        System.out.println(Arrays.toString(array));
-        sort.sort(array);
-        System.out.println(Arrays.toString(array));
-
     }
 }
