@@ -23,3 +23,17 @@ public class HeapSortBench extends AbstractBench {
         new Runner(opt).run();
     }
 }
+
+/*
+Benchmark                      Mode  Cnt    Score    Error  Units
+HeapSortBench.heap             avgt    5  244.815 ±  4.095  us/op
+HeapSortBench.longStringArray  avgt    5  405.046 ±  8.117  us/op
+HeapSortBench.narrowRange      avgt    5  219.550 ±  4.630  us/op
+HeapSortBench.randomArray      avgt    5  258.016 ±  8.976  us/op
+HeapSortBench.repetitiveArray  avgt    5  258.581 ± 10.786  us/op
+HeapSortBench.reversedArray    avgt    5  248.968 ±  9.215  us/op
+HeapSortBench.reversedHeap     avgt    5  247.729 ±  8.324  us/op
+HeapSortBench.sortedArray      avgt    5  252.546 ± 20.227  us/op
+HeapSortBench.stringArray      avgt    5  389.579 ±  7.839  us/op
+HeapSortBench.uniqueArray      avgt    5  251.181 ±  5.689  us/op
+*/

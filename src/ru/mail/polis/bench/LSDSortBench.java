@@ -113,3 +113,17 @@ public class LSDSortBench {
         new Runner(opt).run();
     }
 }
+
+/*
+Benchmark                     Mode  Cnt       Score      Error  Units
+LSDSortBench.heap             avgt    5     213.055 ±  176.137  us/op
+LSDSortBench.longStringArray  avgt    5  118391.869 ± 2145.682  us/op
+LSDSortBench.narrowRange      avgt    5      81.101 ±    1.922  us/op
+LSDSortBench.randomArray      avgt    5     242.760 ±  276.859  us/op
+LSDSortBench.repetitiveArray  avgt    5     193.809 ±   15.129  us/op
+LSDSortBench.reversedArray    avgt    5     150.491 ±    1.158  us/op
+LSDSortBench.reversedHeap     avgt    5     191.459 ±    3.436  us/op
+LSDSortBench.sortedArray      avgt    5     113.126 ±    1.180  us/op
+LSDSortBench.stringArray      avgt    5     251.283 ±    8.955  us/op
+LSDSortBench.uniqueArray      avgt    5     201.026 ±    3.899  us/op
+ */
